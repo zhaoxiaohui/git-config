@@ -1,8 +1,8 @@
 #!/bin/sh
 # set auto completion
 # set bash ps1
-curl -s https://github.com/zhaoxiaohui/git-config/git-completion.bash >~/.git-completion.bash
-curl -s https://github.com/zhaoxiaohui/git-config/bash_git_ps1.sh >~/.bash_git_ps1.sh
+curl -s https://github.com/zhaoxiaohui/git-config/blob/master/.git-completion.bash >~/.git-completion.bash
+curl -s https://github.com/zhaoxiaohui/git-config/blob/master/.bash_git_ps1.sh >~/.bash_git_ps1.sh
 grep -qE .git-completion.bash\|.bash_git_ps1.sh ~/.bashrc || cat >> ~/.bashrc << '__EOF__'
 test -f ~/.git-completion.bash && source ~/.git-completion.bash
 test -f ~/.bash_git_ps1.sh && source ~/.bash_git_ps1.sh
